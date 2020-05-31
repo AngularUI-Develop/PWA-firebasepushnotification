@@ -12,13 +12,14 @@ export class UserlistComponent implements OnInit {
   postDataListing: any = [] ;
   dataArray = [];
   //constructor(private webNotificationService:WebNotificationService) { }
-  constructor(private userService:UserService,private swPush: SwPush,
+  constructor(private userService:UserService,
     private webNotificationService:WebNotificationService) { 
-    this.swPush.notificationClicks.subscribe( event => {
+  /*  this.swPush.notificationClicks.subscribe( event => {
       console.log('Received notification: ', event);
       const url = event.notification.data.url;
       window.open(url, '_blank');
-  });
+      // constructro private swPush: SwPush,
+  });*/
   }
  
   ngOnInit() {
@@ -26,7 +27,7 @@ export class UserlistComponent implements OnInit {
     
   }
   subscribe(){
-    this.webNotificationService.subscribeToNotification();
+  //  this.webNotificationService.subscribeToNotification();
   }
  
   getUserDetails() {

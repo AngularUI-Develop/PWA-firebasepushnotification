@@ -25,22 +25,4 @@ importScripts('https://www.gstatic.com/firebasejs/7.6.0/firebase-messaging.js');
     return self.registration.showNotification(notificationTitle,
       notificationOptions);
   });
-  /*messaging.requestPermission().then(function () {
-     MsgElem.innerHTML = "Notification permission granted." 
-     console.log("Notification permission granted.");
-
-     // get the token in the form of promise
-     return messaging.getToken()
-   })
-   .then(function(token) {
-     // print the token on the HTML page
-     TokenElem.innerHTML = "token is : " + token
-   })
-   .catch(function (err) {
-   ErrElem.innerHTML = ErrElem.innerHTML + "; " + err
-   console.log("Unable to get permission to notify.", err);
- });
-/* messaging.onMessage(function(payload) {
-  console.log("Message received. ", payload);
-  NotisElem.innerHTML = NotisElem.innerHTML + JSON.stringify(payload) 
-});*/
+  

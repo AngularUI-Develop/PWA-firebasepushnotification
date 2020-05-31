@@ -1,18 +1,26 @@
 
  <!--The content below is only a placeholder and can be replaced.-->
-<h2> Welcome to Angular Application</h2>
-<!--<div *ngIf="message"> {{ message | async | json }}</div>-->
-<!-- <button class='btnClass' (click)="requestPushNotificationsPermission()">Request Push Notification</button>-->
-<br/>
 
-<br/>
-<button class='btnClass' (click)="addToHomeScreen()">Add to home screen</button>
+
+
+ 
+<header>
 <ul style='list-style-type: none;'>
 <li>
-  <a routerLink='/userlist' href='/'>Userlist</a><br>
+  <a routerLink='' href='/'>Home</a>
+  <a routerLink='/userlist' href='/'>Userlist</a>
   <a routerLink='/registration' href='/'>Registration</a><br>
   
 </li>
 
 </ul>
+</header>
+<section>
+<h2> Welcome to Angular Application </h2>
+<button class='btnClass' (click)="requestPushNotificationsPermission()">Request Push Notification</button><br>
+<span *ngIf='message'><b>Device token:</b> {{message}}</span>
+</section>
+<footer>
+  <button class='btnClass' (click)="addToHomeScreen()">Add to home screen</button>
+</footer>
 <router-outlet></router-outlet>

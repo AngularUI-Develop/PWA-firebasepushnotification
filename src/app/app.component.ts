@@ -32,13 +32,14 @@ export class AppComponent implements OnInit{
 
   constructor(private messagingService: MessagingService,
     private afMessaging: AngularFireMessaging) { }
+    
  /* constructor(private swPush: SwPush) { 
     this.swPush.notificationClicks.subscribe( event => {
       console.log('Received notification: ', event);
       const url = event.notification.data.url;
       window.open(url, '_blank');
   });*/
- /* requestPushNotificationsPermission() { // requesting permission
+  /*requestPushNotificationsPermission() { // requesting permission
     this.afMessaging.requestToken // getting tokens
       .subscribe(
         (token) => { // USER-REQUESTED-TOKEN
@@ -49,12 +50,17 @@ export class AppComponent implements OnInit{
         }
       );
   }*/
+  requestPushNotificationsPermission()
+  {
+    this.messagingService.sharedMessage.subscribe(message => this.message = message)
+  }
   ngOnInit() {
    /*const userId = 'user001';
     this.messagingService.requestPermission(userId);
     this.messagingService.receiveMessage()
     this.message = this.messagingService.currentMessage;*/
-    this.messagingService.requestPermissions()       
+    
+   this.messagingService.requestPermissions();       
   this.messagingService.receiveMessage();
   this.message = this.messagingService.currentMessage;
   }
