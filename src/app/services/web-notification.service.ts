@@ -6,7 +6,7 @@ import { SwPush } from '@angular/service-worker';
 })
 export class WebNotificationService {
     readonly VAPID_PUBLIC_KEY = 'BLBx-hf2WrL2qEa0qKb-aCJbcxEvyn62GDTyyP9KTS5K7ZL0K7TfmOKSPqp8vQF0DaG8hpSBknz_x3qf5F4iEFo';
-    private baseUrl = 'http://127.0.0.1:8080/notifications';
+    private baseUrl = 'http://127.0.0.1:8080/userlist';
     constructor(private http: HttpClient,
         private swPush: SwPush) { }
     subscribeToNotification() {
@@ -17,6 +17,6 @@ export class WebNotificationService {
             .catch(err => console.error('Could not subscribe to notifications', err));
     }
     sendToServer(params: any) {
-        this.http.post(this.baseUrl, { notification: params }).subscribe();
+      this.http.post(this.baseUrl, { notification: params }).subscribe();
     }
 }
