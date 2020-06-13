@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[1],{CGxZ:function(t,e,r){"use strict";r.d(e,"a",function(){return n});var n=function(){function t(t){this.http=t}return t.prototype.getUsers=function(){return this.http.get("https://reqres.in/api/users?page=2")},t.prototype.registerUser=function(t){return this.http.post("https://reqres.in/api/register",t)},t}()}}]);

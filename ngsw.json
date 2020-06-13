@@ -1,0 +1,86 @@
+{
+  "configVersion": 1,
+  "timestamp": 1592079697563,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/5.61901c9d20cc3c23575a.js",
+        "/6.87be2a1aa1573b83bdac.js",
+        "/common.3524a5ebd5594f73da8e.js",
+        "/favicon.ico",
+        "/firebase-messaging-sw.js",
+        "/index.html",
+        "/main.fff01ffc64c8da369e69.js",
+        "/polyfills.65c6b670baa2ffdf067a.js",
+        "/runtime.445de1133a1effd4f772.js",
+        "/styles.3ff695c00d717f2d2a11.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "api-performance",
+      "patterns": [
+        "\\/assets\\/i18n\\/.*",
+        "\\/api\\/.*"
+      ],
+      "strategy": "performance",
+      "maxSize": 100,
+      "maxAge": 259200000,
+      "version": 1
+    },
+    {
+      "name": "api-freshness",
+      "patterns": [
+        "\\/api\\/users\\?page=2"
+      ],
+      "strategy": "freshness",
+      "maxSize": 100,
+      "maxAge": 259200000,
+      "timeoutMs": 0,
+      "version": 1
+    }
+  ],
+  "hashTable": {
+    "/5.61901c9d20cc3c23575a.js": "f8205789e68060666cb444bf12cd91a262dd5ff4",
+    "/6.87be2a1aa1573b83bdac.js": "9eeacd42d49c0e8672089d29ab44fa5da8a4c842",
+    "/common.3524a5ebd5594f73da8e.js": "1c2ef41277448e83957656fee7ff8ed612ebbc65",
+    "/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "/firebase-messaging-sw.js": "1705b8f6523621dd26eec9ab8570f3022149979c",
+    "/index.html": "916363ca9206c427b53836e4880f7109e3c9cfec",
+    "/main.fff01ffc64c8da369e69.js": "5ce55cede48081848c9c132e66358558d289a461",
+    "/polyfills.65c6b670baa2ffdf067a.js": "66795e05235a55556f28ed30880e228cdab11b48",
+    "/runtime.445de1133a1effd4f772.js": "181307f95633aeaeb6368db1fe309fdbdae61f07",
+    "/styles.3ff695c00d717f2d2a11.css": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
